@@ -1,5 +1,5 @@
 #PGfile<-read.csv("DiretTransfer.csv")#read filePG for data
-Results<-StanRes(PGfile,24,36,12,.36)
+#Results<-StanRes(PGfile,24,36,12,.36)
 StanRes<-function(PGfile,UpperT,LowerT,DirT,Bac,DH=NULL){
 #set.seed(101) #optional from shiny checkbox
 #data output in these arrays - LR, second and third arrays are Pr(sec) and Pr(direct) transfer probabilities respectively
@@ -430,7 +430,7 @@ z=0
 }
 
 ##FUNCTION SENSITIVITY ANALYSIS
-Results<-StanSens(PGfile,24,36,6,.36,8)
+#Results<-StanSens(PGfile,24,36,6,.36,8)
 StanSens<-function(PGfile,UpperT,LowerT,DirT,Bac,GtrxNo,DH=NULL){#GtrxNo is the number in the GTRX array below to identify##log10 LR equivs
 Gtrx<-c(75,106,137,146,139,172,181,182,237,266,266,266)###NECESSARY TO HARD CODE PEAK HEIGHT EQUIVS HERE
   LowerT=LowerT-1 #Adjust LowerT to 1 hr blocks
